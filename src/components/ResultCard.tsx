@@ -89,29 +89,88 @@ export default function ResultCard({ result, onRestart }: ResultCardProps) {
           </div>
         </motion.div>
 
-        {/* アクションボタン */}
+        {/* 結果共有セクション */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="glass-effect p-6 rounded-lg"
+        >
+          <h3 className="text-xl font-bold mb-4 text-center">結果を共有</h3>
+          
+          {/* URL共有 */}
+          <div className="mb-4">
+            <label className="block text-sm font-medium text-gray-300 mb-2">
+              このページのURL
+            </label>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={window.location.href}
+                readOnly
+                className="flex-1 bg-glass-dark border border-white/20 rounded-lg px-3 py-2 text-sm text-gray-300"
+              />
+              <button
+                onClick={() => {
+                  navigator.clipboard.writeText(window.location.href);
+                  alert('URLをコピーしました！');
+                }}
+                className="glass-effect px-4 py-2 rounded-lg hover:bg-glass/20 transition-all duration-300 text-sm"
+              >
+                コピー
+              </button>
+            </div>
+          </div>
+          
+          {/* SNSシェアボタン */}
+          <div className="flex flex-wrap gap-3 justify-center">
+            <button
+              onClick={() => {
+                const text = `私の哲学者は${philosopher.name}でした！\n\n"${philosopher.quote}"\n\n#KnowThyself #哲学診断`;
+                const url = encodeURIComponent(window.location.href);
+                window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${url}`, '_blank');
+              }}
+              className="glass-effect px-4 py-2 rounded-lg hover:bg-glass/20 transition-all duration-300 text-sm"
+            >
+              Twitterでシェア
+            </button>
+            
+            <button
+              onClick={() => {
+                const text = `私の哲学者は${philosopher.name}でした！\n\n"${philosopher.quote}"\n\n#KnowThyself #哲学診断`;
+                const url = encodeURIComponent(window.location.href);
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+              }}
+              className="glass-effect px-4 py-2 rounded-lg hover:bg-glass/20 transition-all duration-300 text-sm"
+            >
+              Facebookでシェア
+            </button>
+            
+            <button
+              onClick={() => {
+                const text = `私の哲学者は${philosopher.name}でした！\n\n"${philosopher.quote}"\n\n#KnowThyself #哲学診断`;
+                const url = encodeURIComponent(window.location.href);
+                window.open(`https://line.me/R/msg/text/?${encodeURIComponent(text + '\n\n' + window.location.href)}`, '_blank');
+              }}
+              className="glass-effect px-4 py-2 rounded-lg hover:bg-glass/20 transition-all duration-300 text-sm"
+            >
+              LINEでシェア
+            </button>
+          </div>
+        </motion.div>
+
+        {/* アクションボタン */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.1 }}
+          className="flex justify-center"
         >
           <button
             onClick={onRestart}
             className="glass-effect px-8 py-3 rounded-lg hover:bg-glass/20 transition-all duration-300 font-medium"
           >
             もう一度診断する
-          </button>
-          
-          <button
-            onClick={() => {
-              const text = `私の哲学者は${philosopher.name}でした！\n\n"${philosopher.quote}"\n\n#KnowThyself #哲学診断`;
-              const url = encodeURIComponent(window.location.href);
-              window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${url}`, '_blank');
-            }}
-            className="glass-effect px-8 py-3 rounded-lg hover:bg-glass/20 transition-all duration-300 font-medium"
-          >
-            結果をシェア
           </button>
         </motion.div>
       </div>
