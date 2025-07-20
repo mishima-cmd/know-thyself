@@ -25,271 +25,271 @@ export interface Philosopher {
 export const questions: Question[] = [
   {
     id: 1,
-    text: "人生で最も大切にしているものは？",
+    text: "あなたが人生で最も大切にしているものは？",
     options: [
       {
-        text: "内面の平静と心の安定",
-        scores: { stoic: 4, buddhist: 3, taoist: 2 }
+        text: "内面の平静と理性",
+        scores: { epictetus: 3, kant: 1 }
       },
       {
         text: "自由と自己実現",
-        scores: { existential: 4, nietzsche: 3, sartre: 2 }
+        scores: { nietzsche: 3, sartre: 1 }
       },
       {
-        text: "他者との調和と関係性",
-        scores: { confucian: 4, aristotle: 3, socrates: 2 }
+        text: "他者との調和と社会的徳",
+        scores: { confucius: 3, aristotle: 1 }
       }
     ]
   },
   {
     id: 2,
-    text: "困難に直面した時、どのように対処しますか？",
+    text: "困難に直面したとき、どうしますか？",
     options: [
       {
-        text: "受け入れて、変えられることに集中する",
-        scores: { stoic: 5, buddhist: 3 }
+        text: "理想や理念を思い出す",
+        scores: { plato: 3, descartes: 1 }
       },
       {
-        text: "積極的に行動して状況を変える",
-        scores: { nietzsche: 5, existential: 3 }
+        text: "不条理を受け入れつつ前進する",
+        scores: { camus: 3, mill: 1 }
       },
       {
-        text: "周囲の人々と相談して解決策を探る",
-        scores: { confucian: 5, socrates: 3 }
+        text: "日々の習慣や実践に立ち返る",
+        scores: { 'marcus-aurelius': 3, spinoza: 1 }
       }
     ]
   },
   {
     id: 3,
-    text: "人生の意味についてどう考えますか？",
+    text: "あなたにとって『善』とは？",
     options: [
       {
-        text: "自分で作り出すものだ",
-        scores: { existential: 5, nietzsche: 4 }
+        text: "普遍的な道徳法則に従うこと",
+        scores: { kant: 3, hegel: 1 }
       },
       {
-        text: "自然の流れに従うものだ",
-        scores: { buddhist: 5, taoist: 4 }
+        text: "存在そのものを問い続けること",
+        scores: { heidegger: 3, sartre: 1 }
       },
       {
-        text: "理性と徳を追求することだ",
-        scores: { aristotle: 5, stoic: 3 }
+        text: "対話と実践を通じて磨かれるもの",
+        scores: { socrates: 3, aristotle: 1 }
       }
     ]
   },
   {
     id: 4,
-    text: "常識や既存の価値観についてどう思いますか？",
+    text: "知識や学びについてどう考えますか？",
     options: [
       {
-        text: "時々疑ってみる",
-        scores: { nietzsche: 5, socrates: 4 }
+        text: "対話を通じて真理を探求する",
+        scores: { socrates: 3, plato: 1 }
       },
       {
-        text: "基本的に信頼している",
-        scores: { confucian: 5, aristotle: 3 }
+        text: "体系的な理論を構築する",
+        scores: { aristotle: 3, descartes: 1 }
       },
       {
-        text: "状況に応じて判断する",
-        scores: { existential: 4, stoic: 3 }
+        text: "直感や感性を重視する",
+        scores: { spinoza: 3, camus: 1 }
       }
     ]
   },
   {
     id: 5,
-    text: "最も幸せを感じる瞬間は？",
+    text: "社会や政治についてどう考えますか？",
     options: [
       {
-        text: "静かに思索にふける時",
-        scores: { stoic: 5, buddhist: 4 }
+        text: "理想的な社会を設計する",
+        scores: { plato: 3, hegel: 1 }
       },
       {
-        text: "新しいことに挑戦する時",
-        scores: { nietzsche: 5, existential: 4 }
+        text: "個人の自由を重視する",
+        scores: { nietzsche: 3, mill: 1 }
       },
       {
-        text: "人々と交流する時",
-        scores: { confucian: 5, socrates: 4 }
+        text: "調和と秩序を重んじる",
+        scores: { confucius: 3, 'marcus-aurelius': 1 }
       }
     ]
   },
   {
     id: 6,
-    text: "知識や学びについてどう考えますか？",
+    text: "死や不条理についてどう考えますか？",
     options: [
       {
-        text: "対話を通じて真理を探求する",
-        scores: { socrates: 5, plato: 4 }
+        text: "受け入れて平静を保つ",
+        scores: { epictetus: 3, camus: 1 }
       },
       {
-        text: "体系的な理論を構築する",
-        scores: { aristotle: 5, kant: 4 }
+        text: "不条理に立ち向かう",
+        scores: { camus: 3, sartre: 1 }
       },
       {
-        text: "直感的な悟りを重視する",
-        scores: { buddhist: 5, taoist: 4 }
+        text: "超越的な意味を求める",
+        scores: { hegel: 3, plato: 1 }
       }
     ]
   },
   {
     id: 7,
-    text: "社会や政治についてどう考えますか？",
+    text: "時間についてどう考えますか？",
     options: [
       {
-        text: "理想的な社会を設計する",
-        scores: { plato: 5, hegel: 4 }
+        text: "今この瞬間を大切にする",
+        scores: { marcus-aurelius: 3, spinoza: 1 }
       },
       {
-        text: "個人の自由を重視する",
-        scores: { nietzsche: 5, existential: 4 }
+        text: "未来に向かって進歩する",
+        scores: { hegel: 3, kant: 1 }
       },
       {
-        text: "調和と秩序を重んじる",
-        scores: { confucian: 5, aristotle: 4 }
+        text: "過去の伝統を重んじる",
+        scores: { confucius: 3, aristotle: 1 }
       }
     ]
   },
   {
     id: 8,
-    text: "死や不条理についてどう考えますか？",
+    text: "美や芸術についてどう考えますか？",
     options: [
       {
-        text: "受け入れて平静を保つ",
-        scores: { stoic: 5, buddhist: 4 }
+        text: "理想的な美を追求する",
+        scores: { plato: 3, aristotle: 1 }
       },
       {
-        text: "不条理に立ち向かう",
-        scores: { camus: 5, existential: 4 }
+        text: "創造的な表現を重視する",
+        scores: { nietzsche: 3, sartre: 1 }
       },
       {
-        text: "超越的な意味を求める",
-        scores: { heidegger: 5, kant: 4 }
+        text: "自然の美に調和する",
+        scores: { spinoza: 3, camus: 1 }
       }
     ]
   },
   {
     id: 9,
-    text: "時間についてどう考えますか？",
+    text: "道徳や倫理についてどう考えますか？",
     options: [
       {
-        text: "今この瞬間を大切にする",
-        scores: { stoic: 5, buddhist: 4 }
+        text: "普遍的な道徳法則を求める",
+        scores: { kant: 3, aristotle: 1 }
       },
       {
-        text: "未来に向かって進歩する",
-        scores: { hegel: 5, nietzsche: 4 }
+        text: "個人の価値観を重視する",
+        scores: { nietzsche: 3, mill: 1 }
       },
       {
-        text: "過去の伝統を重んじる",
-        scores: { confucian: 5, aristotle: 4 }
+        text: "社会的な調和を重んじる",
+        scores: { confucius: 3, marcus-aurelius: 1 }
       }
     ]
   },
   {
     id: 10,
-    text: "美や芸術についてどう考えますか？",
+    text: "自然や環境についてどう考えますか？",
     options: [
       {
-        text: "理想的な美を追求する",
-        scores: { plato: 5, aristotle: 4 }
+        text: "自然と一体になる",
+        scores: { spinoza: 3, camus: 1 }
       },
       {
-        text: "創造的な表現を重視する",
-        scores: { nietzsche: 5, existential: 4 }
+        text: "自然を理解して制御する",
+        scores: { aristotle: 3, descartes: 1 }
       },
       {
-        text: "自然の美に調和する",
-        scores: { taoist: 5, buddhist: 4 }
+        text: "人間の意志で自然を超える",
+        scores: { nietzsche: 3, hegel: 1 }
       }
     ]
   },
   {
     id: 11,
-    text: "道徳や倫理についてどう考えますか？",
+    text: "愛や人間関係についてどう考えますか？",
     options: [
       {
-        text: "普遍的な道徳法則を求める",
-        scores: { kant: 5, aristotle: 4 }
+        text: "他者への思いやりを重視する",
+        scores: { confucius: 3, marcus-aurelius: 1 }
       },
       {
-        text: "個人の価値観を重視する",
-        scores: { nietzsche: 5, existential: 4 }
+        text: "個人の自由な関係を求める",
+        scores: { sartre: 3, mill: 1 }
       },
       {
-        text: "社会的な調和を重んじる",
-        scores: { confucian: 5, stoic: 4 }
+        text: "理性的な愛を追求する",
+        scores: { plato: 3, kant: 1 }
       }
     ]
   },
   {
     id: 12,
-    text: "自然や環境についてどう考えますか？",
+    text: "技術や文明についてどう考えますか？",
     options: [
       {
-        text: "自然と一体になる",
-        scores: { taoist: 5, buddhist: 4 }
+        text: "技術の進歩を信頼する",
+        scores: { hegel: 3, kant: 1 }
       },
       {
-        text: "自然を理解して制御する",
-        scores: { aristotle: 5, kant: 4 }
+        text: "技術に警鐘を鳴らす",
+        scores: { heidegger: 3, spinoza: 1 }
       },
       {
-        text: "人間の意志で自然を超える",
-        scores: { nietzsche: 5, hegel: 4 }
+        text: "技術を人間的に活用する",
+        scores: { mill: 3, aristotle: 1 }
       }
     ]
   },
   {
     id: 13,
-    text: "愛や人間関係についてどう考えますか？",
+    text: "あなたの人生の目標は？",
     options: [
       {
-        text: "他者への思いやりを重視する",
-        scores: { confucian: 5, buddhist: 4 }
+        text: "内面の成長と悟り",
+        scores: { epictetus: 3, marcus-aurelius: 1 }
       },
       {
-        text: "個人の自由な関係を求める",
-        scores: { existential: 5, nietzsche: 4 }
+        text: "創造と自己実現",
+        scores: { nietzsche: 3, sartre: 1 }
       },
       {
-        text: "理性的な愛を追求する",
-        scores: { plato: 5, aristotle: 4 }
+        text: "社会への貢献と調和",
+        scores: { confucius: 3, aristotle: 1 }
       }
     ]
   },
   {
     id: 14,
-    text: "技術や文明についてどう考えますか？",
+    text: "幸福とは何だと思いますか？",
     options: [
       {
-        text: "技術の進歩を信頼する",
-        scores: { hegel: 5, aristotle: 4 }
+        text: "徳に基づく魂の活動",
+        scores: { aristotle: 3, plato: 1 }
       },
       {
-        text: "技術に警鐘を鳴らす",
-        scores: { heidegger: 5, taoist: 4 }
+        text: "自由な自己決定",
+        scores: { sartre: 3, nietzsche: 1 }
       },
       {
-        text: "技術を人間的に活用する",
-        scores: { kant: 5, existential: 4 }
+        text: "社会的な善の実現",
+        scores: { mill: 3, confucius: 1 }
       }
     ]
   },
   {
     id: 15,
-    text: "あなたの人生の目標は？",
+    text: "あなたが最も共感する考え方は？",
     options: [
       {
-        text: "内面の成長と悟り",
-        scores: { buddhist: 4, stoic: 3, taoist: 2 }
+        text: "理性と論理を重視する",
+        scores: { descartes: 3, kant: 1 }
       },
       {
-        text: "創造と自己実現",
-        scores: { nietzsche: 4, existential: 3, sartre: 2 }
+        text: "感情や直感を信じる",
+        scores: { spinoza: 3, camus: 1 }
       },
       {
-        text: "社会への貢献と調和",
-        scores: { confucian: 4, aristotle: 3, socrates: 2 }
+        text: "歴史や伝統を大切にする",
+        scores: { hegel: 3, confucius: 1 }
       }
     ]
   }

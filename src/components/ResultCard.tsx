@@ -11,7 +11,7 @@ interface ResultCardProps {
 
 export default function ResultCard({ result, onRestart }: ResultCardProps) {
   const { philosopher } = result;
-
+  const defaultImage = '/default-philosopher.png'; // public配下にデフォルト画像を用意
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9 }}
@@ -20,38 +20,49 @@ export default function ResultCard({ result, onRestart }: ResultCardProps) {
       className="glass-card p-8 max-w-xl mx-auto text-center animate-fade-in"
     >
       {/* 肖像画 */}
-      {philosopher.imageUrl && (
-        <div className="flex justify-center mb-4">
-          <Image
-            src={philosopher.imageUrl}
-            alt={`${philosopher.name}の肖像画`}
-            width={120}
-            height={120}
-            className="rounded-full border-4 border-white shadow-lg bg-white object-cover"
-            priority
-          />
-        </div>
-      )}
+      <div className="flex justify-center mb-4">
+        <Image
+          src={philosopher.imageUrl || defaultImage}
+          alt={`${philosopher.name}の肖像画`}
+          width={120}
+          height={120}
+          className="rounded-full border-4 border-white shadow-lg bg-white object-cover"
+          priority
+          onError={(e) => { (e.target as HTMLImageElement).src = defaultImage; }}
+        />
+      </div>
       <h2 className="text-2xl md:text-3xl font-bold mb-2 text-glow">{philosopher.name}</h2>
       <div className="text-sm text-gray-400 mb-2">{philosopher.school}</div>
       <blockquote className="italic text-lg mb-4">“{philosopher.quote}”</blockquote>
       <p className="mb-4">{philosopher.description}</p>
-      {/* 著書リンク */}
+      {/* 著書リンクUX強化 */}
       {philosopher.book && (
         <div className="mb-4">
           <div className="font-bold">代表的な著書：</div>
           <div className="text-base mb-1">{philosopher.book.title}</div>
           <div className="text-xs text-gray-500 mb-1">{philosopher.book.description}</div>
-          {philosopher.book.url && (
-            <a
-              href={philosopher.book.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block mt-1 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-            >
-              無料で読む（外部サイト）
-            </a>
-          )}
+          <div className="flex flex-col items-center gap-2">
+            {philosopher.book.url && (
+              <a
+                href={philosopher.book.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-1 px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+              >
+                原典（英語）をProject Gutenbergで読む
+              </a>
+            )}
+            {philosopher.book.amazonUrl && (
+              <a
+                href={philosopher.book.amazonUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-1 px-3 py-1 bg-yellow-600 text-white rounded hover:bg-yellow-700 transition"
+              >
+                日本語訳をAmazonで探す
+              </a>
+            )}
+          </div>
         </div>
       )}
       {/* 結果共有セクション */}

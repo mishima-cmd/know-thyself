@@ -7,7 +7,13 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
+    domains: [
+      'upload.wikimedia.org',
+      'commons.wikimedia.org',
+      'archive.org',
+      'www.gutenberg.org'
+    ],
   },
-}
+};
 
-module.exports = nextConfig 
+module.exports = nextConfig; 
