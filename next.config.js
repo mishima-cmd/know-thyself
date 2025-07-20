@@ -8,6 +8,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: '/know-thyself',
+  assetPrefix: '/know-thyself/',
 }
 
 module.exports = nextConfig 
