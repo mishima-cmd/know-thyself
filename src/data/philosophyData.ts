@@ -28,15 +28,15 @@ export const questions: Question[] = [
     options: [
       {
         text: "内面の平静と心の安定",
-        scores: { stoic: 5, buddhist: 3 }
+        scores: { stoic: 4, buddhist: 3, taoist: 2 }
       },
       {
         text: "自由と自己実現",
-        scores: { existential: 5, nietzsche: 3 }
+        scores: { existential: 4, nietzsche: 3, sartre: 2 }
       },
       {
         text: "他者との調和と関係性",
-        scores: { confucian: 5, aristotle: 3 }
+        scores: { confucian: 4, aristotle: 3, socrates: 2 }
       }
     ]
   },
@@ -280,15 +280,15 @@ export const questions: Question[] = [
     options: [
       {
         text: "内面の成長と悟り",
-        scores: { buddhist: 5, stoic: 4 }
+        scores: { buddhist: 4, stoic: 3, taoist: 2 }
       },
       {
         text: "創造と自己実現",
-        scores: { nietzsche: 5, existential: 4 }
+        scores: { nietzsche: 4, existential: 3, sartre: 2 }
       },
       {
         text: "社会への貢献と調和",
-        scores: { confucian: 5, aristotle: 4 }
+        scores: { confucian: 4, aristotle: 3, socrates: 2 }
       }
     ]
   }
