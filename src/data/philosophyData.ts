@@ -17,6 +17,7 @@ export interface Philosopher {
     title: string;
     description: string;
     amazonUrl?: string;
+    url?: string;
   };
   imageUrl?: string;
 }
@@ -301,9 +302,11 @@ export const philosophers: Philosopher[] = [
     school: "ストア派",
     quote: "変えられないことを受け入れ、変えられることに集中せよ。そして、その違いを見分ける知恵を持て。",
     description: "古代ローマのストア派哲学者。奴隷として生まれながらも、内面の自由と平静を追求し、人生の困難に立ち向かう実践的な哲学を説きました。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/8/8b/Epictetus.jpg",
     book: {
-      title: "人生談義",
-      description: "エピクテトスの教えをまとめた古典。現代でも多くの人々に影響を与え続けています。"
+      title: "人生談義（Discourses）",
+      description: "エピクテトスの教えをまとめた古典。現代でも多くの人々に影響を与え続けています。",
+      url: "https://www.gutenberg.org/ebooks/45109"
     }
   },
   {
@@ -312,9 +315,11 @@ export const philosophers: Philosopher[] = [
     school: "ストア派",
     quote: "あなたが今この瞬間にできることを、心から愛し、情熱を持って行いなさい。",
     description: "ローマ皇帝でありながらストア派哲学者。『自省録』で内面の平静と徳の追求を説き、現代でも多くの指導者に影響を与えています。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/2b/Marcus_Aurelius_Glyptothek_Munich_337.jpg",
     book: {
-      title: "自省録",
-      description: "皇帝が自身に語りかけた哲学的な内省の記録。リーダーシップと内面の成長を学べる古典。"
+      title: "自省録（Meditations）",
+      description: "皇帝が自身に語りかけた哲学的な内省の記録。リーダーシップと内面の成長を学べる古典。",
+      url: "https://www.gutenberg.org/ebooks/2680"
     }
   },
   {
@@ -323,9 +328,11 @@ export const philosophers: Philosopher[] = [
     school: "個人主義",
     quote: "神は死んだ。そして我々が神を殺したのだ。",
     description: "既存の価値観を根本から問い直し、個人の意志と創造性を重視した哲学者。超人思想で知られています。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Nietzsche1882.jpg",
     book: {
-      title: "ツァラトゥストラはこう語った",
-      description: "ニーチェの代表作。詩的な文体で人生の意味と個人の成長について語っています。"
+      title: "ツァラトゥストラはこう語った（Thus Spoke Zarathustra）",
+      description: "ニーチェの代表作。詩的な文体で人生の意味と個人の成長について語っています。",
+      url: "https://www.gutenberg.org/ebooks/1998"
     }
   },
   {
@@ -334,9 +341,11 @@ export const philosophers: Philosopher[] = [
     school: "実存主義",
     quote: "人間は自由の刑に処されている。",
     description: "実存主義の代表的な哲学者。人間の自由と責任、人生の意味を自分で作り出すことの重要性を説きました。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Jean_Paul_Sartre_1965.jpg",
     book: {
       title: "実存主義とは何か",
-      description: "実存主義の基本概念を分かりやすく解説した入門書。"
+      description: "実存主義の基本概念を分かりやすく解説した入門書。",
+      url: "https://www.aozora.gr.jp/cards/001095/files/426_15020.html"
     }
   },
   {
@@ -345,9 +354,11 @@ export const philosophers: Philosopher[] = [
     school: "実存主義",
     quote: "人生に意味はない。しかし、意味がないからこそ人生は生きる価値がある。",
     description: "不条理の哲学を説いた実存主義者。人生の無意味さを認めながらも、それに立ち向かう勇気と美しさを追求しました。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabac%2C_1957.jpg",
     book: {
-      title: "シーシュポスの神話",
-      description: "不条理な人生を生きる意味について考察した哲学的エッセイ。"
+      title: "シーシュポスの神話（The Myth of Sisyphus）",
+      description: "不条理な人生を生きる意味について考察した哲学的エッセイ。",
+      url: "https://archive.org/details/mythofsisyphus00camu_0"
     }
   },
   {
@@ -356,9 +367,11 @@ export const philosophers: Philosopher[] = [
     school: "古代ギリシャ",
     quote: "無知の知。私は何も知らないということを知っている。",
     description: "古代ギリシャの哲学者。対話を通じて真理を探求する方法を確立し、西洋哲学の基礎を築きました。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/a/a4/Socrates_Louvre.jpg",
     book: {
-      title: "ソクラテスの弁明",
-      description: "プラトンが記録したソクラテスの裁判での弁明。哲学の本質を学べる古典。"
+      title: "ソクラテスの弁明（Apology）",
+      description: "プラトンが記録したソクラテスの裁判での弁明。哲学の本質を学べる古典。",
+      url: "https://www.gutenberg.org/ebooks/1656"
     }
   },
   {
@@ -367,9 +380,11 @@ export const philosophers: Philosopher[] = [
     school: "古代ギリシャ",
     quote: "善き人々は、悪しき人々よりも、より多くのことを学ぶ。",
     description: "ソクラテスの弟子であり、西洋哲学の礎を築いた哲学者。イデア論や哲人政治を説き、理想的な社会のあり方を追求しました。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/99/Plato-raphael.jpg",
     book: {
-      title: "国家",
-      description: "正義と理想国家について論じたプラトンの代表作。政治哲学の古典。"
+      title: "国家（The Republic）",
+      description: "正義と理想国家について論じたプラトンの代表作。政治哲学の古典。",
+      url: "https://www.gutenberg.org/ebooks/1497"
     }
   },
   {
@@ -378,9 +393,11 @@ export const philosophers: Philosopher[] = [
     school: "古代ギリシャ",
     quote: "幸福は、徳に基づく魂の活動である。",
     description: "プラトンの弟子であり、論理学、倫理学、政治学など幅広い分野で西洋思想に大きな影響を与えた哲学者。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Aristotle_Altemps_Inv8575.jpg",
     book: {
-      title: "ニコマコス倫理学",
-      description: "幸福と徳について体系的に論じた倫理学の古典。"
+      title: "ニコマコス倫理学（Nicomachean Ethics）",
+      description: "幸福と徳について体系的に論じた倫理学の古典。",
+      url: "https://www.gutenberg.org/ebooks/8438"
     }
   },
   {
@@ -389,9 +406,11 @@ export const philosophers: Philosopher[] = [
     school: "批判哲学",
     quote: "汝の意志の格率が、同時に普遍的法則となるように行為せよ。",
     description: "啓蒙主義の代表的な哲学者。理性の限界を明らかにし、道徳の普遍性を追求した批判哲学を確立しました。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4a/Immanuel_Kant_%28painted_portrait%29.jpg",
     book: {
-      title: "純粋理性批判",
-      description: "人間の認識能力の限界を明らかにした哲学の革命的な著作。"
+      title: "純粋理性批判（Critique of Pure Reason）",
+      description: "人間の認識能力の限界を明らかにした哲学の革命的な著作。",
+      url: "https://www.gutenberg.org/ebooks/4280"
     }
   },
   {
@@ -400,20 +419,11 @@ export const philosophers: Philosopher[] = [
     school: "観念論",
     quote: "真なるものは全体である。",
     description: "ドイツ観念論の完成者。弁証法を通じて歴史と精神の発展を体系的に説明し、現代思想に大きな影響を与えました。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Hegel_portrait_by_Schlesinger_1831.jpg",
     book: {
-      title: "精神現象学",
-      description: "意識から絶対知への発展過程を描いたヘーゲルの代表作。"
-    }
-  },
-  {
-    id: "laozi",
-    name: "老子",
-    school: "東洋思想",
-    quote: "道は常に無為にして為さざるなし。",
-    description: "道教の開祖。自然の流れに従い、無為自然の境地を説いた東洋思想の代表的な哲学者です。",
-    book: {
-      title: "老子道徳経",
-      description: "老子の思想をまとめた古典。簡潔な言葉で深い真理を表現しています。"
+      title: "精神現象学（Phenomenology of Spirit）",
+      description: "意識から絶対知への発展過程を描いたヘーゲルの代表作。",
+      url: "https://www.marxists.org/reference/archive/hegel/works/ph/phgeneng.htm"
     }
   },
   {
@@ -422,31 +432,11 @@ export const philosophers: Philosopher[] = [
     school: "儒教",
     quote: "己の欲せざる所は、人に施すことなかれ。",
     description: "儒教の開祖。仁義礼智信の五常を説き、人としての道徳と社会秩序の重要性を強調しました。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Confucius_the_scholar.jpg",
     book: {
-      title: "論語",
-      description: "孔子と弟子たちの対話を記録した儒教の根本経典。"
-    }
-  },
-  {
-    id: "buddha",
-    name: "ブッダ",
-    school: "仏教",
-    quote: "怒りを捨てよ。怒りを捨てることによって、苦しみから解放される。",
-    description: "仏教の開祖。四諦八正道を説き、苦しみからの解脱と悟りの境地を追求する道を示しました。",
-    book: {
-      title: "法句経",
-      description: "ブッダの教えを簡潔な詩句でまとめた仏教の根本経典。"
-    }
-  },
-  {
-    id: "zhuangzi",
-    name: "荘子",
-    school: "道教",
-    quote: "天地と並び立つ者は、万物と一体となる。",
-    description: "老子と並ぶ道教の代表者。自由な精神と自然との調和を重視し、世俗的な価値観を超えた境地を説きました。",
-    book: {
-      title: "荘子",
-      description: "寓話を通じて道教の思想を表現した古典。自由と自然の調和を学べる。"
+      title: "論語（The Analects）",
+      description: "孔子と弟子たちの対話を記録した儒教の根本経典。",
+      url: "https://www.gutenberg.org/ebooks/3330"
     }
   },
   {
@@ -455,9 +445,11 @@ export const philosophers: Philosopher[] = [
     school: "現象学",
     quote: "存在するとは、世界内存在である。",
     description: "現象学と実存主義を融合させた哲学者。人間の存在の本質を問い、技術文明への警鐘を鳴らしました。",
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Heidegger_1934.jpg",
     book: {
-      title: "存在と時間",
-      description: "人間の存在の本質を問うハイデッガーの代表作。"
+      title: "存在と時間（Being and Time）",
+      description: "人間の存在の本質を問うハイデッガーの代表作。",
+      url: "https://archive.org/details/BeingAndTime"
     }
   }
 ];
