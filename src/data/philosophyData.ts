@@ -137,7 +137,7 @@ export const questions: Question[] = [
     options: [
       {
         text: "今この瞬間を大切にする",
-        scores: { marcus-aurelius: 3, spinoza: 1 }
+        scores: { "marcus-aurelius": 3, spinoza: 1 }
       },
       {
         text: "未来に向かって進歩する",
@@ -181,7 +181,7 @@ export const questions: Question[] = [
       },
       {
         text: "社会的な調和を重んじる",
-        scores: { confucius: 3, marcus-aurelius: 1 }
+        scores: { confucius: 3, "marcus-aurelius": 1 }
       }
     ]
   },
@@ -209,7 +209,7 @@ export const questions: Question[] = [
     options: [
       {
         text: "他者への思いやりを重視する",
-        scores: { confucius: 3, marcus-aurelius: 1 }
+        scores: { confucius: 3, "marcus-aurelius": 1 }
       },
       {
         text: "個人の自由な関係を求める",
@@ -245,7 +245,7 @@ export const questions: Question[] = [
     options: [
       {
         text: "内面の成長と悟り",
-        scores: { epictetus: 3, marcus-aurelius: 1 }
+        scores: { epictetus: 3, "marcus-aurelius": 1 }
       },
       {
         text: "創造と自己実現",
