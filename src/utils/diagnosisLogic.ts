@@ -32,15 +32,35 @@ export function calculateDiagnosis(answers: { [questionId: number]: number }): D
   let selectedPhilosopher = philosophers[0]; // デフォルト
   
   if (topSchool === 'stoic') {
-    selectedPhilosopher = philosophers.find(p => p.id === 'epictetus') || philosophers[0];
+    // ストア派の中からランダムに選択
+    const stoicPhilosophers = philosophers.filter(p => p.school === 'ストア派');
+    selectedPhilosopher = stoicPhilosophers[Math.floor(Math.random() * stoicPhilosophers.length)] || philosophers[0];
   } else if (topSchool === 'nietzsche') {
     selectedPhilosopher = philosophers.find(p => p.id === 'nietzsche') || philosophers[0];
   } else if (topSchool === 'existential') {
-    selectedPhilosopher = philosophers.find(p => p.id === 'sartre') || philosophers[0];
-  } else if (topSchool === 'socrates') {
-    selectedPhilosopher = philosophers.find(p => p.id === 'socrates') || philosophers[0];
-  } else if (topSchool === 'buddhist' || topSchool === 'taoist') {
-    selectedPhilosopher = philosophers.find(p => p.id === 'laozi') || philosophers[0];
+    // 実存主義の中からランダムに選択
+    const existentialPhilosophers = philosophers.filter(p => p.school === '実存主義');
+    selectedPhilosopher = existentialPhilosophers[Math.floor(Math.random() * existentialPhilosophers.length)] || philosophers[0];
+  } else if (topSchool === 'socrates' || topSchool === 'plato' || topSchool === 'aristotle') {
+    // 古代ギリシャの中からランダムに選択
+    const greekPhilosophers = philosophers.filter(p => p.school === '古代ギリシャ');
+    selectedPhilosopher = greekPhilosophers[Math.floor(Math.random() * greekPhilosophers.length)] || philosophers[0];
+  } else if (topSchool === 'buddhist') {
+    selectedPhilosopher = philosophers.find(p => p.id === 'buddha') || philosophers[0];
+  } else if (topSchool === 'confucian') {
+    selectedPhilosopher = philosophers.find(p => p.id === 'confucius') || philosophers[0];
+  } else if (topSchool === 'taoist') {
+    // 道教の中からランダムに選択
+    const taoistPhilosophers = philosophers.filter(p => p.school === '道教');
+    selectedPhilosopher = taoistPhilosophers[Math.floor(Math.random() * taoistPhilosophers.length)] || philosophers[0];
+  } else if (topSchool === 'kant') {
+    selectedPhilosopher = philosophers.find(p => p.id === 'kant') || philosophers[0];
+  } else if (topSchool === 'hegel') {
+    selectedPhilosopher = philosophers.find(p => p.id === 'hegel') || philosophers[0];
+  } else if (topSchool === 'camus') {
+    selectedPhilosopher = philosophers.find(p => p.id === 'camus') || philosophers[0];
+  } else if (topSchool === 'heidegger') {
+    selectedPhilosopher = philosophers.find(p => p.id === 'heidegger') || philosophers[0];
   }
   
   const totalScore = Object.values(scores).reduce((sum, score) => sum + score, 0);

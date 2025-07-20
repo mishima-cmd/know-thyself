@@ -41,10 +41,13 @@ export default function ResultCard({ result, onRestart }: ResultCardProps) {
           transition={{ delay: 0.3 }}
           className="glass-effect p-6 rounded-lg"
         >
-          <h3 className="text-xl font-bold mb-4 text-center">最も響く名言</h3>
-          <blockquote className="text-lg italic text-center text-glow">
+          <h3 className="text-xl font-bold mb-4 text-center">あなたへのメッセージ</h3>
+          <blockquote className="text-lg italic text-center text-glow mb-4">
             "{philosopher.quote}"
           </blockquote>
+          <p className="text-center text-gray-300 text-sm">
+            この言葉は、あなたの心の奥深くに響く真理です。{philosopher.name}の教えは、あなたの人生の指針となるでしょう。
+          </p>
         </motion.div>
 
         {/* 哲学の説明 */}
