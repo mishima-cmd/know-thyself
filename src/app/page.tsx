@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { questions, philosophers } from '@/data/philosophyData';
+import { useState, useCallback, useMemo } from 'react';
+import { questions } from '@/data/philosophyData';
 import { calculateDiagnosis, DiagnosisResult } from '@/utils/diagnosisLogic';
 import QuestionCard from '@/components/QuestionCard';
 import ResultCard from '@/components/ResultCard';
@@ -13,7 +13,8 @@ export default function Home() {
   const [showResult, setShowResult] = useState(false);
   const [result, setResult] = useState<DiagnosisResult | null>(null);
 
-  const handleAnswer = (optionIndex: number) => {
+  // パフォーマンス最適化: コールバック関数をメモ化
+  const handleAnswer = useCallback((optionIndex: number) => {
     const newAnswers = { ...answers, [currentQuestion]: optionIndex };
     setAnswers(newAnswers);
 
@@ -24,16 +25,20 @@ export default function Home() {
       setResult(diagnosisResult);
       setShowResult(true);
     }
-  };
+  }, [currentQuestion, answers]);
 
-  const handleRestart = () => {
+  const handleRestart = useCallback(() => {
     setCurrentQuestion(1);
     setAnswers({});
     setShowResult(false);
     setResult(null);
-  };
+  }, []);
 
-  const currentQuestionData = questions.find(q => q.id === currentQuestion);
+  // パフォーマンス最適化: 現在の質問データをメモ化
+  const currentQuestionData = useMemo(() => 
+    questions.find(q => q.id === currentQuestion), 
+    [currentQuestion]
+  );
 
   return (
     <div className="min-h-screen philosophy-gradient relative overflow-hidden">

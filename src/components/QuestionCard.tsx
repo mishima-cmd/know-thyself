@@ -24,11 +24,12 @@ export default function QuestionCard({ question, onAnswer }: QuestionCardProps) 
       <div className="space-y-4">
         {question.options.map((option, index) => (
           <motion.button
-            key={index}
+            key={`option-${question.id}-${index}`}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={() => onAnswer(index)}
             className="w-full p-6 text-left glass-effect rounded-lg hover:bg-glass/20 transition-all duration-300 group"
+            aria-label={`選択肢 ${index + 1}: ${option.text}`}
           >
             <span className="text-lg font-medium group-hover:text-glow transition-colors">
               {option.text}
